@@ -1,14 +1,30 @@
 import java.util.Scanner;
 
-Class Music {
-  public static void main (String args[]) {
-    
-  }
+public class Song {
+    public static void main(String args[]) {
+      Song song = new Song();
+      song.getInput();
+    }
   
-  public void sorted() {
-    Scanner input = new Scanner(System.in);  // Create a Scanner object
-    System.out.println("Select the Song");
-    String songName = input.nextLine();  // Read user input
-    System.out.println("User selected the Song : " + songName);
-  }
+    public void getInput() {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter Initial Capacity : ");
+        int n = input.nextInt();
+        System.out.println("Only "+n+" song/s can be fetched");
+        System.out.println("Enter Number of Songs : ");
+        int m = input.nextInt();
+        returnPlaylist(n,m);
+    }
+  
+    public void returnPlaylist(int a, int b) {
+        if(a>=b) {
+            String[] songArray = new String[b];
+            for (int i=0; i<b; i++) {
+                System.out.println("Enter Song No "+(i+1));
+                Scanner input = new Scanner(System.in);
+                String songName = input.nextLine();
+            }
+        }
+    }
+  
 }
