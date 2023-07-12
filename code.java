@@ -2,8 +2,8 @@ import java.util.Scanner;
 
 public class Song {
     public static void main(String args[]) {
-      Song song = new Song();
-      song.getInput();
+        Song song = new Song();
+        song.getInput();
     }
   
     public void getInput() {
@@ -23,8 +23,9 @@ public class Song {
                 System.out.println("Enter Song No "+(i+1));
                 Scanner input = new Scanner(System.in);
                 String songName = input.nextLine();
+                songArray[i] = songName;
             }
+            System.out.println("PLAYLIST : "+ java.util.Arrays.toString(songArray));
         }
-    }
-  
+    }  
 }
